@@ -1,8 +1,6 @@
 const mongoose = require('mongoose');
 
 const PanelSchema = mongoose.Schema({
-    //title: String,
-    //content: String
     time: 		 { type: String },
     destination: { type: String },
 	flight: 	 { type: String },

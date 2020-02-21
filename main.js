@@ -1,13 +1,13 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 
-// create express app
+// Create express app
 const app = express();
 
-// parse requests of content-type - application/x-www-form-urlencoded
+// Parse requests of content-type - application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: true }))
 
-// parse requests of content-type - application/json
+// Parse requests of content-type - application/json
 app.use(bodyParser.json())
 
 // Configuring the database
@@ -26,7 +26,7 @@ mongoose.connect(dbConfig.url, {
     process.exit();
 });
 
-// define a simple route
+// Welcome
 app.get('/', (req, res) => {
     res.json({"message": "Welcome to Airport Panel!"});
 });
@@ -34,7 +34,7 @@ app.get('/', (req, res) => {
 // Require Flights routes
 require('./app/routes/panel.routes.js')(app);
 
-// listen for requests
+// Listening port for requests
 app.listen(3000, () => {
     console.log("Server is listening on port 3000");
 });
