@@ -2,15 +2,16 @@
   "name": "airportpanel",
   "version": "1.0.0",
   "description": "Airport Panel",
-  "main": "server.js",
+  "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "main.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.19.0",
     "express": "^4.17.1",
-    "mongoose": "^5.9.1"
+    "mongoose": "^5.9.2"
   }
 }
