@@ -3,16 +3,14 @@ const Flight = require('../models/panel.model.js');
 // Create and Save a new Flight
 exports.create = (req, res) => {
     // Validate request
-    if(!req.body.content) {
+    if(!req.body.time) {
         return res.status(400).send({
-            message: "Flight content can't be empty"
+            message: "Flight time can't be empty!"
         });
     }
 
     // Create a Flight
     const flight = new Flight({
-        //title: req.body.title || "Untitled Flight", 
-        //content: req.body.content
         time: 		 req.body.time,
         destination: req.body.destination,
         flight: 	 req.body.flight,
@@ -28,7 +26,7 @@ exports.create = (req, res) => {
         res.send(data);
     }).catch(err => {
         res.status(500).send({
-            message: err.message || "Some error occurred while creating the Flight."
+            message: err.message || "Some error occurred while creating the Flight..."
         });
     });
 };
@@ -40,7 +38,7 @@ exports.findAll = (req, res) => {
         res.send(flights);
     }).catch(err => {
         res.status(500).send({
-            message: err.message || "Some error occurred while retrieving flights."
+            message: err.message || "Some error occurred while retrieving flights..."
         });
     });
 };
@@ -51,18 +49,18 @@ exports.findOne = (req, res) => {
     .then(flight => {
         if(!flight) {
             return res.status(404).send({
-                message: "Flight not found with id " + req.params.flightId
+                message: "Flight not found with id: " + req.params.flightId
             });            
         }
         res.send(flight);
     }).catch(err => {
         if(err.kind === 'ObjectId') {
             return res.status(404).send({
-                message: "Flight not found with id " + req.params.flightId
+                message: "Flight not found with id: " + req.params.flightId
             });                
         }
         return res.status(500).send({
-            message: "Error retrieving flight with id " + req.params.flightId
+            message: "Error retrieving flight with id: " + req.params.flightId
         });
     });
 };
@@ -70,32 +68,37 @@ exports.findOne = (req, res) => {
 // Update a flight identified by the flightId in the request
 exports.update = (req, res) => {
     // Validate Request
-    if(!req.body.content) {
+    if(!req.body.time) {
         return res.status(400).send({
-            message: "Flight content can not be empty"
+            message: "Flight time can't be empty!"
         });
     }
 
     // Find flight and update it with the request body
     Flight.findByIdAndUpdate(req.params.flightId, {
-        title: req.body.title || "Untitled Flight",
-        content: req.body.content
+        time: 		 req.body.time,
+        destination: req.body.destination,
+        flight: 	 req.body.flight,
+        counter:   	 req.body.counter,
+        boarding: 	 req.body.boarding,
+        gate: 		 req.body.gate,
+        remarks:	 req.body.remarks
     }, {new: true})
     .then(flight => {
         if(!flight) {
             return res.status(404).send({
-                message: "Flight not found with id " + req.params.flightId
+                message: "Flight not found with id: " + req.params.flightId
             });
         }
         res.send(flight);
     }).catch(err => {
         if(err.kind === 'ObjectId') {
             return res.status(404).send({
-                message: "Flight not found with id " + req.params.flightId
+                message: "Flight not found with id: " + req.params.flightId
             });                
         }
         return res.status(500).send({
-            message: "Error updating flight with id " + req.params.flightId
+            message: "Error updating flight with id: " + req.params.flightId
         });
     });
 };
@@ -106,18 +109,18 @@ exports.delete = (req, res) => {
     .then(flight => {
         if(!flight) {
             return res.status(404).send({
-                message: "Flight not found with id " + req.params.flight
+                message: "Flight not found with id: " + req.params.flight
             });
         }
         res.send({message: "Flight deleted successfully!"});
     }).catch(err => {
         if(err.kind === 'ObjectId' || err.name === 'NotFound') {
             return res.status(404).send({
-                message: "Flight not found with id " + req.params.flightId
+                message: "Flight not found with id: " + req.params.flightId
             });                
         }
         return res.status(500).send({
-            message: "Could not delete flight with id " + req.params.flightId
+            message: "Could not delete flight with id: " + req.params.flightId
         });
     });
 };
