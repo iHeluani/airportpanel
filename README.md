@@ -9,6 +9,10 @@ Airport Tool for airport panels management. Restful CRUD API application created
 
 **IDE:** Visual Studio Code
 
+## Deployment
+
+**URL:** https://arcane-brushlands-86591.herokuapp.com/
+
 ## Steps to setup
 
 1. Clone repository
@@ -51,4 +55,4 @@ To insert data we can follow this JSON example:
 
 ## Oncoming changes
 
-As I've been trying to deploy it to the cloud with Heroku and Google Cloud Platform without success (we can use `heroku` and `gcloud` commands to check it). My next step is to achieve that and also I'll use Sonar in my code.
+As I've been trying to deploy it to the cloud with Heroku and Google Cloud Platform without success on last one. My next step is to achieve that so it can be deployed using a FEXCO technology and also I'll use Sonar in my code.
