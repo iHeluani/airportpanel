@@ -37,3 +37,7 @@ In this project we hace 3 HTTP endpoints as follows:
 **DELETE:** `/flight/:flightId`
 
 To try it we can use any REST Client, as a Advanced REST client for Chrome.
+
+## Oncoming changes
+
+As I've been trying to deploy it to the cloud with Heroku and Google Cloud Platform without success. My next step is to achieve that and also I'll use Sonar in my code.
