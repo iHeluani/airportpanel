@@ -1,5 +1,5 @@
 # AIRPORTPANEL
-Airport Tool for airport panels management. Restful CRUD API application created with Node.js, Express and MongoDB.
+Airport Tool for airport panels management. Restful CRUD API application created with Node.js, Express and MongoDB. Deployed using Heroku.
 
 ## Documentation
 
