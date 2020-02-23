@@ -37,6 +37,17 @@ In this project we hace 3 HTTP endpoints as follows:
 **DELETE:** `/flight/:flightId`
 
 To try it we can use any REST Client, as a Advanced REST client for Chrome.
+To insert data we can follow this JSON example:
+
+`{
+  "time": "18:00",
+  "destination": "Paris",
+  "flight": "RYR7652",
+  "counter": "1/9",
+  "boarding": "16:30",
+  "gate": "X1",
+  "remarks": "Last call"
+}`
 
 ## Oncoming changes
 heroku
