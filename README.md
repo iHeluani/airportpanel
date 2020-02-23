@@ -50,5 +50,5 @@ To insert data we can follow this JSON example:
 }`
 
 ## Oncoming changes
-heroku
+
 As I've been trying to deploy it to the cloud with Heroku and Google Cloud Platform without success (we can use `heroku` and `gcloud` commands to check it). My next step is to achieve that and also I'll use Sonar in my code.
