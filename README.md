@@ -45,7 +45,7 @@ To insert data we can follow this JSON example:
 
 `{
   "time": "18:00",
-  "destination": "Paris",
+  "destination": "Dublin",
   "flight": "RYR7652",
   "counter": "1/9",
   "boarding": "16:30",
