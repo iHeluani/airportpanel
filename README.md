@@ -40,7 +40,7 @@ In this project we have 3 HTTP endpoints as follows:
 **UPDATE:** `/flight/:flightId`
 **DELETE:** `/flight/:flightId`
 
-To try it we can use any REST Client, as a Advanced REST client for Chrome.
+To try it we can use any REST Client, as Advanced REST client for Chrome.
 To insert data we can follow this JSON example:
 
 `{
