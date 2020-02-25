@@ -5,6 +5,8 @@ Airport Tool for airport panels management. Restful CRUD API application created
 
 **Requirements & Data model:** https://drive.google.com/open?id=10GR8tSc9Dkve3voRnQwkz5nfh7rhSxep65YzJsEkceE
 
+**Test Plan:** https://drive.google.com/open?id=1ybEDIo-iWK5E-FG6ERCKOsFJ-JH6otqAOcxgDGmOd9U
+
 **Sprints:** https://drive.google.com/open?id=1OCRbJjehu4Q0Cbdpnl4JyBKBX8g9Fog0u7fy2wIcd0Y
 
 **IDE:** Visual Studio Code
