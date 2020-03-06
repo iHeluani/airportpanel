@@ -31,7 +31,7 @@ Airport Tool for airport panels management. Restful CRUD API application created
 
 4. Application running
 
-The app will be running at por 8080 (http://localhost/8080).
+The app will be running at port 8080 (http://localhost/8080).
 
 ## HTTP CRUD EXPLANATION
 
